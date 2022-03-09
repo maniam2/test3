@@ -1,0 +1,511 @@
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Vazir.eot');
+    src: url('fonts/Vazir.eot?#iefix') format('embedded-opentype'), url('fonts/Vazir.woff2') format('woff2'), url('fonts/Vazir.woff') format('woff'), url('fonts/Vazir.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/Vazir-Bold.eot');
+    src: url('fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Vazir-Bold.woff2') format('woff2'), url('fonts/Vazir-Bold.woff') format('woff'), url('fonts/Vazir-Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazir', Arial, sans-serif;
+    font-weight: normal;
+    background-color: #d4d4d4;
+}
+
+
+/*header menu*/
+
+li {
+    list-style: none;
+    cursor: pointer;
+    transition: color .2s;
+    font-size: 17px!important;
+}
+
+li:hover {
+    color: #FF4A52;
+}
+
+ul {
+    height: 10px!important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.d-flex {
+    display: flex!important;
+    background-color: rgb(250, 250, 250);
+}
+
+.w-100 {
+    width: 100%!important;
+}
+
+.w-50 {
+    width: 50%!important;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.font-15 {
+    font-size: 15px!important;
+}
+
+header {
+    background-color: #ffffff;
+    justify-content: space-around;
+    padding: 5px 0;
+    position: relative;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 35px;
+    font-size: 1.3em;
+    margin-top: 13px;
+    color: black;
+}
+
+.search-icon {
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+}
+
+.search-icon a {
+    color: black;
+}
+
+.drop-down-menu a {
+    color: black;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+nav ul ul {
+    display: none;
+    z-index: 1;
+}
+
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+
+nav ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+nav ul li {
+    float: right;
+    position: relative;
+    font-family: Vazir;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 32px;
+    text-decoration: none;
+}
+
+nav ul ul {
+    border-radius: 0px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+}
+
+nav ul ul li {
+    float: none;
+    position: relative;
+}
+
+nav ul ul li a {
+    padding: 15px 40px;
+    color: #fff;
+}
+
+.register {
+    font-weight: bold;
+}
+
+
+/*slider*/
+
+#slider {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#slider img {
+    width: 100%;
+    height: 650px;
+}
+
+.slide {
+    display: none;
+    animation: fade 0.7s;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider-text {
+    color: rgb(235, 235, 235);
+    position: absolute;
+    bottom: 565px;
+    right: -500px;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    font-family: Vazir;
+    font-weight: bold;
+}
+
+.slider-text2 {
+    color: rgb(235, 235, 235);
+    position: absolute;
+    bottom: 500px;
+    right: -250px;
+    text-align: center;
+    width: 100%;
+    font-size: 23px;
+    font-family: Vazir;
+    font-weight: bold;
+}
+
+.prev,
+.next {
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+#dots {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(104, 104, 104);
+    margin-top: 10px;
+}
+
+.dot.active {
+    background: rgb(252, 128, 128);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* services part */
+
+
+/* service header */
+
+.services {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(144, 144, 144, .25);
+    padding: 100px 0;
+    font-family: Vazir;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.services-header h2 {
+    font-size: 3.5vw;
+    margin-bottom: 20px;
+    color: #474747;
+}
+
+.services-header p {
+    font-size: 1.4vw;
+    color: #5a5a5a;
+}
+
+
+/* ---------------------------------------------- */
+
+
+/* services boxes */
+
+.services-box {
+    display: flex;
+    justify-content: space-between;
+    text-align: center!important;
+    width: 90%;
+    margin: 0 auto;
+    font-family: Vazir;
+}
+
+.icon:before {
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+.blue-icon {
+    background-color: #3cadd4;
+    color: #ffffff;
+}
+
+.green-icon {
+    background-color: #add43c;
+    color: #ffffff;
+}
+
+.red-icon {
+    background-color: #d43c61;
+    color: #ffffff;
+}
+
+.big {
+    font-size: 35px;
+    padding: 30px;
+    border-radius: 100%;
+}
+
+.services-box>* {
+    float: left;
+}
+
+.services-box:before,
+.services-box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box {
+    background-color: #fafafa;
+    padding: 70px 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(144, 144, 144, .25);
+    width: calc(calc(100% / 3) - 86px);
+    margin: 0 10px;
+    transition: background-color 0.5s ease;
+}
+
+.box:hover {
+    background-color: #d8d8d8;
+}
+
+.box h3 {
+    color: #858585;
+    margin: 60px 0px 10px 0px;
+}
+
+
+/* ------------------------------------- */
+
+
+/* main about */
+
+
+/* about header */
+
+.about {
+    border-bottom: 1px solid rgba(144, 144, 144, .25);
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.about-header h2 {
+    font-size: 3.5vw;
+    margin-bottom: 20px;
+    color: #474747;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: Vazir;
+}
+
+.about-header p {
+    font-size: 1.4vw;
+    color: #5a5a5a;
+}
+
+
+/* --------------------- */
+
+
+/* about content */
+
+.about-content {
+    border-top: 1px solid rgba(144, 144, 144, .25);
+    border-bottom: 1px solid rgba(144, 144, 144, .25);
+    padding: 60px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.about-content>* {
+    float: left;
+}
+
+.about-content:before,
+.about-content:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.profile {
+    width: 25%;
+    font-family: Vazir;
+}
+
+.profile img {
+    float: left;
+    border-radius: 50%;
+}
+
+.profile h4 {
+    color: #383b43;
+    margin: 20px 0px 10px 0px;
+    font-weight: 800;
+}
+
+.profile p {
+    font-weight: 200;
+}
+
+
+/* ------------------------ */
+
+
+/* about footer */
+
+.about-footer {
+    padding: 50px;
+    width: 60%;
+    margin: 0px auto;
+}
+
+.about-footer p {
+    line-height: 25px;
+}
+
+.about-footer button {
+    margin-top: 35px;
+}
+
+.fa-check {
+    color: green;
+}
+
+.fa-spinner {
+    color: rgb(236, 236, 52);
+}
+
+.fa-share {
+    color: rgb(76, 108, 175);
+}
+
+.fa-registered {
+    color: rgb(185, 90, 90);
+}
+
+.btn {
+    padding: 13px 23px;
+    border: 0;
+    border-radius: 30px;
+    font-size: 1.3vw;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 480px;
+    font-family: Vazir;
+}
+
+.btn-dark {
+    background-color: #383b43;
+    color: #ffffff!important;
+}
+
+
+/* ------------------- 
+........
+..
+.
+.
+.
+.
+.
+.
+..
+
+
+
+*/
+
+footer {
+    background-color: #040E27;
+    padding: 60px 0;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.right-footer {
+    color: #fff;
+    font-family: Vazir;
+    text-align: center;
+}
